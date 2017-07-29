@@ -1,0 +1,8 @@
+vpn:
+  image: atpons/pulse-ssh
+  env_file: .env
+  volumes:
+    - "~/.ssh:/home/vpn/.ssh"
+  command: "sh /home/vpn/run.sh"
+  tty: true  
+  privileged: true
