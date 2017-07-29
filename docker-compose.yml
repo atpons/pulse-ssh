@@ -4,5 +4,6 @@ vpn:
   volumes:
     - "~/.ssh:/home/vpn/.ssh"
   command: "sh /home/vpn/run.sh"
-  tty: true  
-  privileged: true
+  tty: true 
+  cap_add:
+    - NET_ADMIN 
